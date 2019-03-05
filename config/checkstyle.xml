@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.1//EN" "http://www.puppycrawl.com/dtds/configuration_1_1.dtd">
+<!--
+
+   Checkstyle checks are at: http://checkstyle.sourceforge.net/checks.html
+
+   -->
+
+<!-- commons math customization of default Checkstyle behavior -->
+<module name="Checker">
+    <property name="localeLanguage" value="en"/>
+
+    <!-- No tabs allowed! -->
+    <module name="FileTabCharacter"/>
+
+    <!-- Require files to end with newline characters -->
+    <module name="NewlineAtEndOfFile"/>
+
+    <!-- Suppress checkstyle in code -->
+    <module name="SuppressWarningsFilter"/>
+
+    <module name="TreeWalker">
+
+        <property name="tabWidth" value="4"/>
+
+        <!-- No trailing whitespace -->
+        <module name="Regexp">
+            <property name="format" value="[ \t]+$"/>
+            <property name="illegalPattern" value="true"/>
+            <property name="message" value="Trailing whitespace"/>
+        </module>
+
+        <!-- No if/else/do/for/while without braces -->
+        <module name="NeedBraces"/>
+
+        <!-- Must have class / interface header comments -->
+        <module name="JavadocType"/>
+
+        <!-- Must have javadoc for public methods -->
+        <module name="JavadocMethod">
+            <property name="scope" value="public"/>
+            <property name="allowUndeclaredRTE" value="true"/>
+            <property name="allowMissingParamTags" value="true"/>
+            <property name="allowMissingReturnTag" value="true"/>
+            <property name="allowMissingThrowsTags" value="true"/>
+
+        </module>
+
+        <!-- Protect internal member variables -->
+        <module name="VisibilityModifier">
+            <property name="packageAllowed" value="true"/>
+            <property name="protectedAllowed" value="true"/>
+        </module>
+
+        <!-- Only a single space to separate tokens -->
+        <module name="SingleSpaceSeparator"/>
+
+        <!-- Allow treewalker to suppress warnings -->
+        <module name="SuppressWarningsHolder"/>
+
+        <!-- Make sure there is whitespace around tokens -->
+        <module name="WhitespaceAround"/>
+
+        <!-- Follow Java Style Guidelines about function modifier order
+             https://stackoverflow.com/questions/16731240/what-is-a-reasonable-order-of-java-modifiers-abstract-final-public-static-e -->
+        <module name="ModifierOrder"/>
+
+        <!-- No single letter variable names, except for loops -->
+        <module name="LocalVariableName">
+            <property name="tokens" value="VARIABLE_DEF"/>
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="allowOneCharVarInForLoop" value="true"/>
+        </module>
+
+    </module>
+
+</module>

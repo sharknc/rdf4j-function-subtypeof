@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="rdf4j-function-subtypeof_main" target="1.8" />
+      <module name="rdf4j-function-subtypeof_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

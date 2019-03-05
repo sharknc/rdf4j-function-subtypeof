@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/rdf4j-function-subtypeof.iml" filepath="$PROJECT_DIR$/rdf4j-function-subtypeof.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rdf4j-function-subtypeof_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rdf4j-function-subtypeof_main.iml" group="rdf4j-function-subtypeof" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rdf4j-function-subtypeof_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rdf4j-function-subtypeof_test.iml" group="rdf4j-function-subtypeof" />
+    </modules>
+  </component>
+</project>

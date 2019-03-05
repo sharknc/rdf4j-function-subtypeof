@@ -9,7 +9,7 @@ import org.eclipse.rdf4j.query.algebra.evaluation.function.Function;
 /**
  *
  */
-public class SubtypeFunction implements Function {
+public class SubtypeOfFunction implements Function {
     // define a constant for the namespace of our custom function
     public static final String NAMESPACE = "http://example.org/custom-function/";
 
